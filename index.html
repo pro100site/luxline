@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lux Line Luxury Auto Spa — Автомойка в Алматы</title>
+<meta name="description" content="Lux Line Luxury Auto Spa: автомойка на улица Кажымукана, 4, Медеуский район, Алматы. Мойка паром и бесконтактная мойка, химчистка салона, мойка двигателя и днища, полировка. Ежедневно 08:00–23:00, рейтинг 4,9 в 2ГИС.">
+<link rel="canonical" href="https://pro100site.github.io/luxline/">
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Lux Line Luxury Auto Spa — Автомойка в Алматы">
+<meta property="og:description" content="Мойка паром, бесконтактная мойка, химчистка салона и полировка. улица Кажымукана, 4, Алматы. Ежедневно 08:00–23:00.">
+<meta property="og:url" content="https://pro100site.github.io/luxline/">
+<meta property="og:image" content="https://pro100site.github.io/luxline/img/og-cover.jpg">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+<meta property="og:locale" content="ru_KZ">
+<meta name="theme-color" content="#12100E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2312100E'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='14' fill='%23C9A24A' text-anchor='middle'%3ELL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoWash","name":"Lux Line Luxury Auto Spa","image":"https://pro100site.github.io/luxline/img/hero.jpg","url":"https://pro100site.github.io/luxline/","telephone":"+7 701 706 66 66","address":{"@type":"PostalAddress","streetAddress":"улица Кажымукана, 4","addressLocality":"Алматы","postalCode":"050051","addressCountry":"KZ"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"422"},"openingHours":"Mo-Su 08:00-23:00"}
+</script>
+<style>
+:root{
+  --night:#12100E; --night2:#1A1714; --panel:#211D19;
+  --ink:#F5EFE4; --mut:#A79B8B; --dim:#7C7264;
+  --gold:#C9A24A; --gold-lt:#EBD4A3; --line:rgba(201,162,74,.20);
+  --serif:"Cormorant",Georgia,serif; --sans:"Montserrat",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);color:var(--ink);font-family:var(--sans);
+  font-weight:400;font-size:16px;line-height:1.62;letter-spacing:.01em;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:300;margin:0;line-height:1.05;letter-spacing:.01em}
+p{margin:0}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);
+  font-weight:600;margin:0 0 18px}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* ---------- шапка ---------- */
+.top{position:absolute;top:0;left:0;right:0;z-index:30;padding:18px 0;
+  background:linear-gradient(180deg,rgba(18,16,14,.72),rgba(18,16,14,0))}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:11px;min-width:0;flex:1 1 auto;min-height:44px}
+.brand .mono{flex:0 0 auto;width:38px;height:38px;border:1px solid var(--gold);
+  display:grid;place-items:center;font-family:var(--serif);font-size:1rem;
+  letter-spacing:.06em;color:var(--gold-lt)}
+.brand .bn{display:block;font-family:var(--serif);font-size:1.12rem;letter-spacing:.14em;
+  text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand .bs{display:none;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mut)}
+.top-nav{display:none;gap:26px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.top-nav a:hover{color:var(--gold-lt)}
+.hd-tel{flex:0 0 auto;border:1px solid var(--line);padding:9px 14px;font-size:.78rem;
+  letter-spacing:.06em;white-space:nowrap;color:var(--ink);min-height:44px;display:flex;align-items:center}
+.hd-tel:hover{border-color:var(--gold);color:var(--gold-lt)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:96px 0 0;overflow:hidden;isolation:isolate}
+.hero-img{position:absolute;inset:0;z-index:-2}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:
+    radial-gradient(125% 85% at 6% 82%,rgba(15,13,11,.97) 0%,rgba(15,13,11,.82) 40%,rgba(18,16,14,.22) 74%,rgba(18,16,14,.58) 100%),
+    linear-gradient(180deg,rgba(18,16,14,.55) 0%,rgba(18,16,14,0) 28%,rgba(18,16,14,.9) 100%)}
+.hero-waves{position:absolute;inset:auto -20% -30% -20%;height:60%;z-index:-1;opacity:.32;
+  background:repeating-radial-gradient(ellipse at 50% 120%,rgba(201,162,74,.16) 0 1px,transparent 1px 46px)}
+.hero-side{position:absolute;right:14px;top:50%;transform:translateY(-50%);z-index:2;display:none;
+  writing-mode:vertical-rl;font-size:.6rem;letter-spacing:.4em;text-transform:uppercase;color:var(--mut)}
+.hero-in{padding:0 0 26px}
+.hero-h1{font-size:clamp(3.1rem,15.5vw,7.4rem);letter-spacing:.02em;line-height:.92}
+.hero-h1 .ln{display:block;font-style:italic;font-weight:300;color:var(--gold-lt);
+  font-size:clamp(2.1rem,10.6vw,5.1rem);letter-spacing:.06em;margin-top:.12em}
+.hero-sub{max-width:34ch;margin:20px 0 0;color:#EDE5D8;font-size:.95rem;line-height:1.66}
+.hero-h1,.hero-sub,.hero .eyebrow{text-shadow:0 2px 26px rgba(8,6,5,.62),0 1px 3px rgba(8,6,5,.45)}
+.hero-cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:26px 0 0;max-width:420px}
+.btn{display:flex;align-items:center;justify-content:center;min-height:52px;padding:0 18px;
+  font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-align:center;
+  transition:transform .2s ease,background .2s ease,border-color .2s ease,color .2s ease}
+.btn-gold{background:var(--gold);color:#171310}
+.btn-gold:hover{background:var(--gold-lt)}
+.btn-ghost{border:1px solid rgba(245,239,228,.34);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-lt)}
+.spec{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid rgba(245,239,228,.16);
+  margin-top:8px}
+.spec div{padding:13px 0 15px;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.spec div b{display:block;font-family:var(--serif);font-size:1.28rem;letter-spacing:.02em;
+  text-transform:none;color:var(--ink);margin-bottom:2px;font-weight:400}
+.spec div:nth-child(odd){border-right:1px solid rgba(245,239,228,.12);padding-right:12px}
+.spec div:nth-child(even){padding-left:14px}
+
+/* ---------- секции ---------- */
+section{padding:64px 0}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:30px}
+.sec-head h2{font-size:clamp(1.95rem,8vw,3.1rem)}
+.sec-head p{color:var(--mut);max-width:52ch;font-size:.92rem}
+
+/* манифест */
+.manifest{background:var(--night2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.man-grid{display:grid;gap:26px}
+.man-q{font-family:var(--serif);font-size:clamp(1.7rem,7.4vw,3rem);line-height:1.22;font-weight:300}
+.man-q em{font-style:italic;color:var(--gold-lt)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.fact{background:var(--night2);padding:16px 14px}
+.fact b{display:block;font-family:var(--serif);font-size:1.12rem;font-weight:400;color:var(--gold-lt)}
+.fact span{display:block;font-size:.72rem;letter-spacing:.06em;color:var(--mut);margin-top:3px}
+
+/* прайс по классам */
+.cx{margin-top:6px;display:grid;grid-auto-flow:column;grid-auto-columns:82%;
+  gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;
+  -webkit-overflow-scrolling:touch}
+.cx::-webkit-scrollbar{height:3px}
+.cx::-webkit-scrollbar-thumb{background:var(--line)}
+.cx-card{scroll-snap-align:start;background:var(--panel);border:1px solid var(--line);
+  padding:20px 18px 18px;min-width:0}
+.cx-num{font-size:.62rem;letter-spacing:.3em;color:var(--gold);margin-bottom:12px}
+.cx-name{font-size:1.42rem;font-weight:400;letter-spacing:.02em}
+.cx-note{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin:5px 0 14px}
+.cx-rows{display:grid;gap:0}
+.cx-row{display:flex;justify-content:space-between;gap:10px;padding:8px 0;
+  border-top:1px solid rgba(245,239,228,.08);font-size:.82rem;color:#DCD3C4}
+.cx-row b{font-weight:600;color:var(--ink);white-space:nowrap}
+.price-note{margin-top:16px;font-size:.76rem;color:var(--dim);line-height:1.6}
+
+/* услуги */
+.svc{border-top:1px solid var(--line)}
+.svc-row{display:grid;grid-template-columns:38px 1fr;column-gap:12px;row-gap:4px;
+  padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
+.svc-n{font-family:var(--serif);font-size:.92rem;color:var(--gold);padding-top:4px}
+.svc-t{font-size:1.22rem;font-weight:400}
+.svc-d{grid-column:2;font-size:.87rem;color:var(--mut);line-height:1.6}
+.more{margin-top:26px;border:1px solid var(--line);background:var(--panel)}
+.more summary{cursor:pointer;padding:16px 18px;font-size:.74rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gold-lt);list-style:none;display:flex;
+  justify-content:space-between;align-items:center;min-height:48px}
+.more summary::-webkit-details-marker{display:none}
+.more summary::after{content:"+";font-size:1.1rem;color:var(--gold)}
+.more[open] summary::after{content:"–"}
+.ex{display:grid;gap:0;padding:0 18px 12px}
+.ex-row{display:flex;align-items:baseline;gap:8px;padding:8px 0;font-size:.83rem;color:#D6CDBE}
+.ex-dots{flex:1 1 auto;border-bottom:1px dotted rgba(245,239,228,.16);transform:translateY(-3px)}
+.ex-row b{font-weight:600;color:var(--ink);white-space:nowrap}
+
+/* галерея */
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+figure{margin:0;position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--panel)}
+figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+figure figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 12px;
+  font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#EDE4D6;
+  background:linear-gradient(180deg,rgba(18,16,14,0),rgba(18,16,14,.86))}
+
+/* лаундж */
+.lounge-grid{display:grid;gap:22px}
+.lounge-photo{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--panel)}
+.lounge-photo img{width:100%;height:100%;object-fit:cover}
+.lounge-txt h2{font-size:clamp(1.95rem,8vw,3rem);margin-bottom:16px}
+.lounge-list{display:grid;gap:14px;margin-top:6px;padding:0;list-style:none}
+.lounge-list li{position:relative;padding-left:22px;font-size:.9rem;color:var(--mut);line-height:1.66}
+.lounge-list li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:1px;background:var(--gold)}
+
+/* отзывы */
+.reviews{background:var(--night2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rev-grid{display:grid;gap:14px}
+.rev{border:1px solid var(--line);padding:22px 20px;background:rgba(33,29,25,.55)}
+.rev-q{font-family:var(--serif);font-size:2.6rem;line-height:.7;color:var(--gold);margin-bottom:8px}
+.rev blockquote{margin:0;font-size:.93rem;line-height:1.7;color:#DFD6C7}
+.rev .rev-src{margin-top:14px;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+
+/* контакты */
+.contacts-grid{display:grid;gap:24px}
+.c-row{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.c-lab{flex:0 0 88px;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);
+  padding-top:5px}
+.c-val{min-width:0;font-size:.95rem;line-height:1.55;word-break:break-word}
+.c-val a{color:var(--gold-lt);border-bottom:1px solid rgba(201,162,74,.35)}
+#map{height:300px;border:1px solid var(--line);filter:grayscale(.35) contrast(1.05)}
+.map-note{margin-top:10px;font-size:.72rem;color:var(--dim)}
+.cta-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+
+/* финал */
+.final{position:relative;overflow:hidden;text-align:center;padding:76px 0}
+.final-bg{position:absolute;inset:0;z-index:0}
+.final-bg img{width:100%;height:100%;object-fit:cover;opacity:.42}
+.final::after{content:"";position:absolute;inset:0;z-index:1;
+  background:radial-gradient(70% 90% at 50% 50%,rgba(18,16,14,.62),rgba(18,16,14,.95))}
+.final-in{position:relative;z-index:2}
+.final h2{font-size:clamp(2rem,9vw,3.6rem);margin-bottom:14px}
+.final p{color:#DED5C6;max-width:44ch;margin:0 auto 24px;font-size:.92rem}
+.final .cta-row{max-width:420px;margin:0 auto}
+
+/* подвал */
+footer{background:#0D0B0A;border-top:1px solid var(--line);padding:34px 0 96px;font-size:.78rem;color:var(--dim)}
+.foot{display:grid;gap:18px}
+.foot .fn{font-family:var(--serif);font-size:1.2rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.foot a:hover{color:var(--gold-lt)}
+.made{letter-spacing:.04em}
+.made a{color:var(--gold-lt);border-bottom:1px solid rgba(201,162,74,.4);display:inline-block;
+  min-height:44px;line-height:44px}
+
+/* липкая панель */
+.sticky-bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;
+  grid-template-columns:1fr 1fr;gap:8px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));
+  background:rgba(13,11,10,.94);border-top:1px solid var(--line);
+  transform:translateY(115%);transition:transform .28s ease;backdrop-filter:blur(8px)}
+.sticky-bar.on{transform:translateY(0)}
+.sticky-bar .btn{min-height:46px}
+
+/* ---------- десктоп ---------- */
+@media(min-width:620px){
+  .brand .bs{display:block}
+  .spec{grid-template-columns:repeat(4,1fr)}
+  .spec div:nth-child(odd){border-right:1px solid rgba(245,239,228,.12)}
+  .spec div{border-right:1px solid rgba(245,239,228,.12)}
+  .spec div:last-child{border-right:0}
+  .gal{grid-template-columns:repeat(2,1fr);gap:14px}
+  .rev-grid{grid-template-columns:repeat(3,1fr)}
+  section{padding:84px 0}
+}
+@media(min-width:900px){
+  .top{padding:24px 0}
+  .top-nav{display:flex}
+  .hero{padding-top:120px}
+  .hero-side{display:block}
+  .hero-cta{max-width:440px}
+  .hero-sub{font-size:1.02rem}
+  .man-grid{grid-template-columns:1.35fr 1fr;gap:52px;align-items:start}
+  .cx{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);overflow:visible;gap:14px}
+  .cx-card:first-child{grid-column:span 1}
+  .svc-row{grid-template-columns:52px 1fr 1.15fr;column-gap:22px;padding:22px 0;align-items:baseline}
+  .svc-d{grid-column:3}
+  .ex{grid-template-columns:1fr 1fr;column-gap:38px;padding:0 22px 16px}
+  .lounge-grid{grid-template-columns:1.05fr 1fr;gap:46px;align-items:center}
+  .contacts-grid{grid-template-columns:1fr 1.1fr;gap:44px}
+  .foot{grid-template-columns:1.2fr 1fr 1fr;align-items:start}
+  footer{padding-bottom:40px}
+  .sticky-bar{display:none}
+  .gal{grid-template-columns:1fr 1fr}
+}
+@media(min-width:1100px){
+  .cx{grid-template-columns:repeat(5,1fr)}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+.reveal{opacity:1;transform:none}
+.js .reveal{opacity:0;transform:translateY(24px)}
+.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top">
+      <span class="mono">LL</span>
+      <span class="bn">Lux Line<span class="bs">luxury auto spa</span></span>
+    </a>
+    <nav class="top-nav">
+      <a href="#price">Прайс</a>
+      <a href="#services">Услуги</a>
+      <a href="#lounge">Лаундж</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="hd-tel" href="tel:+77017066666">+7 701 706 66 66</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-img"><img src="img/hero.jpg" width="1280" height="720" alt="Бокс мойки Lux Line: тёмный автомобиль после мойки, тёплый свет" fetchpriority="high"></div>
+    <div class="hero-waves"></div>
+    <div class="hero-side">luxury auto spa · Алматы</div>
+    <div class="wrap hero-in">
+      <p class="eyebrow">luxury auto spa · Алматы</p>
+      <h1 class="hero-h1">Lux Line<span class="ln">Auto Spa</span></h1>
+      <p class="hero-sub">Мойка, химчистка и уход за кузовом на Кажымукана, 4. Мойка паром, химчистка салона и полировка — по записи и без очереди во дворе.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="https://wa.me/77017066666" target="_blank" rel="noopener">Записаться в WhatsApp</a>
+        <a class="btn btn-ghost" href="#price">Смотреть прайс</a>
+      </div>
+      <div class="spec">
+        <div><b>4,9</b>рейтинг 2ГИС · 615 оценок</div>
+        <div><b>08:00 — 23:00</b>каждый день</div>
+        <div><b>улица Кажымукана, 4</b>Медеуский район</div>
+        <div><b>до 10 машин</b>принимаем сразу</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="manifest">
+    <div class="wrap man-grid">
+      <div class="reveal">
+        <p class="eyebrow">о месте</p>
+        <p class="man-q">Мойка — это не про воду.<br>Это про <em>терпение</em>, свет и то,<br>как машина выглядит утром.</p>
+      </div>
+      <div class="facts reveal">
+        <div class="fact"><b>08:00 — 23:00</b><span>работаем каждый день</span></div><div class="fact"><b>до 10 машин</b><span>принимаем одновременно</span></div><div class="fact"><b>запись</b><span>можно приехать по времени</span></div><div class="fact"><b>зал ожидания</b><span>с кофе и Wi-Fi</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="price">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">прайс</p>
+        <h2>Цены по классу автомобиля</h2>
+        <p>Прайс из карточки 2ГИС: у мойки он одинаковый для всех, разница только в классе машины. Точную сумму подтверждают до начала работ.</p>
+      </div>
+      <div class="cx">
+        <article class="cx-card reveal">
+      <div class="cx-num">01</div>
+      <h3 class="cx-name">Легковая</h3>
+      <p class="cx-note">седан, хэтчбек</p>
+      <div class="cx-rows"><div class="cx-row"><span>Комплекс</span><b>7 000 ₸</b></div><div class="cx-row"><span>Кузов и салон</span><b>6 000 ₸</b></div><div class="cx-row"><span>Кузов + силикон колёс</span><b>4 000 ₸</b></div><div class="cx-row"><span>Химчистка салона</span><b>от 30 000 ₸</b></div></div>
+    </article><article class="cx-card reveal">
+      <div class="cx-num">02</div>
+      <h3 class="cx-name">Кроссовер</h3>
+      <p class="cx-note">кроссовер, универсал</p>
+      <div class="cx-rows"><div class="cx-row"><span>Комплекс</span><b>8 000 ₸</b></div><div class="cx-row"><span>Кузов и салон</span><b>7 000 ₸</b></div><div class="cx-row"><span>Кузов + силикон колёс</span><b>5 000 ₸</b></div><div class="cx-row"><span>Химчистка салона</span><b>от 40 000 ₸</b></div></div>
+    </article><article class="cx-card reveal">
+      <div class="cx-num">03</div>
+      <h3 class="cx-name">Джип</h3>
+      <p class="cx-note">рамный внедорожник</p>
+      <div class="cx-rows"><div class="cx-row"><span>Комплекс</span><b>9 000 ₸</b></div><div class="cx-row"><span>Кузов и салон</span><b>8 000 ₸</b></div><div class="cx-row"><span>Кузов + силикон колёс</span><b>6 000 ₸</b></div><div class="cx-row"><span>Полная химчистка</span><b>от 50 000 ₸</b></div></div>
+    </article><article class="cx-card reveal">
+      <div class="cx-num">04</div>
+      <h3 class="cx-name">Большой джип</h3>
+      <p class="cx-note">крупный внедорожник</p>
+      <div class="cx-rows"><div class="cx-row"><span>Комплекс</span><b>10 000 ₸</b></div><div class="cx-row"><span>Кузов и салон</span><b>9 000 ₸</b></div><div class="cx-row"><span>Кузов + силикон колёс</span><b>7 000 ₸</b></div><div class="cx-row"><span>Полная химчистка</span><b>от 60 000 ₸</b></div></div>
+    </article><article class="cx-card reveal">
+      <div class="cx-num">05</div>
+      <h3 class="cx-name">Микроавтобус</h3>
+      <p class="cx-note">минивэн, микроавтобус</p>
+      <div class="cx-rows"><div class="cx-row"><span>Комплекс</span><b>10 000 ₸</b></div><div class="cx-row"><span>Кузов и салон</span><b>9 000 ₸</b></div><div class="cx-row"><span>Кузов + силикон колёс</span><b>8 000 ₸</b></div><div class="cx-row"><span>Полная химчистка</span><b>от 70 000 ₸</b></div></div>
+    </article>
+      </div>
+      <p class="price-note">Химчистка считается по состоянию салона, поэтому в прайсе стоит «от». Повышенное загрязнение кузова или салона — от 1 000 ₸, удаление гудрона — от 1 000 ₸.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">услуги</p>
+        <h2>Что здесь делают</h2>
+        <p>Шесть направлений, которые указаны в карточке: от паровой мойки до полировки кузова.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-row reveal">
+      <div class="svc-n">01</div>
+      <h3 class="svc-t">Мойка паром</h3>
+      <p class="svc-d">Паровая мойка кузова и подкапотного пространства — без лишней влаги на электрике.</p>
+    </div><div class="svc-row reveal">
+      <div class="svc-n">02</div>
+      <h3 class="svc-t">Бесконтактная мойка</h3>
+      <p class="svc-d">Комплекс по классу автомобиля: кузов, салон, коврики, силикон шин.</p>
+    </div><div class="svc-row reveal">
+      <div class="svc-n">03</div>
+      <h3 class="svc-t">Химчистка салона</h3>
+      <p class="svc-d">Полная или по узлам: потолок, сиденья, панель, двери, багажник, ремни.</p>
+    </div><div class="svc-row reveal">
+      <div class="svc-n">04</div>
+      <h3 class="svc-t">Мойка двигателя</h3>
+      <p class="svc-d">Отдельная услуга с аккуратной просушкой после парогенератора.</p>
+    </div><div class="svc-row reveal">
+      <div class="svc-n">05</div>
+      <h3 class="svc-t">Мойка днища</h3>
+      <p class="svc-d">Аппаратная мойка днища, в том числе после трассы и зимней реагентной каши.</p>
+    </div><div class="svc-row reveal">
+      <div class="svc-n">06</div>
+      <h3 class="svc-t">Полировка кузова</h3>
+      <p class="svc-d">Полировка кузова и салонных элементов, кондиционер кожаных поверхностей.</p>
+    </div>
+      </div>
+      <details class="more">
+        <summary>Дополнительные услуги и цены</summary>
+        <div class="ex">
+          <div class="ex-row"><span>Мойка двигателя</span><span class="ex-dots"></span><b>от 6 000 ₸</b></div><div class="ex-row"><span>Мойка днища</span><span class="ex-dots"></span><b>от 10 000 ₸</b></div><div class="ex-row"><span>Силикон шин</span><span class="ex-dots"></span><b>1 200 ₸</b></div><div class="ex-row"><span>Силикон проёмов (зимой)</span><span class="ex-dots"></span><b>300 ₸</b></div><div class="ex-row"><span>Кешер двигателя</span><span class="ex-dots"></span><b>3 000 — 5 000 ₸</b></div><div class="ex-row"><span>Полировка салона</span><span class="ex-dots"></span><b>от 5 000 ₸</b></div><div class="ex-row"><span>Кондиционер кожаных поверхностей</span><span class="ex-dots"></span><b>от 5 000 ₸</b></div><div class="ex-row"><span>Удаление гудрона с кузова</span><span class="ex-dots"></span><b>от 1 000 ₸</b></div><div class="ex-row"><span>Химчистка потолка</span><span class="ex-dots"></span><b>от 7 000 ₸</b></div><div class="ex-row"><span>Химчистка напольного покрытия</span><span class="ex-dots"></span><b>от 7 000 ₸</b></div><div class="ex-row"><span>Химчистка сиденья</span><span class="ex-dots"></span><b>от 5 000 ₸</b></div><div class="ex-row"><span>Химчистка багажника</span><span class="ex-dots"></span><b>от 5 000 ₸</b></div><div class="ex-row"><span>Химчистка панели</span><span class="ex-dots"></span><b>от 4 000 ₸</b></div><div class="ex-row"><span>Химчистка двери</span><span class="ex-dots"></span><b>от 2 000 ₸</b></div><div class="ex-row"><span>Химчистка поликов</span><span class="ex-dots"></span><b>от 2 000 ₸</b></div><div class="ex-row"><span>Химчистка ремней безопасности</span><span class="ex-dots"></span><b>от 2 000 ₸</b></div><div class="ex-row"><span>Чистка салона мыльным раствором</span><span class="ex-dots"></span><b>от 5 000 ₸</b></div><div class="ex-row"><span>Мойка мототранспорта</span><span class="ex-dots"></span><b>от 2 000 ₸</b></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">кадры</p>
+        <h2>Кузов, диск, свет</h2>
+      </div>
+      <div class="gal">
+        <figure class="reveal">
+          <img src="img/gal1.jpg" width="1152" height="864" alt="Полировка капота тёмного автомобиля микрофиброй" loading="lazy">
+          <figcaption>Полировка кузова</figcaption>
+        </figure>
+        <figure class="reveal">
+          <img src="img/gal2.jpg" width="1152" height="864" alt="Мойка колёсной арки под давлением, мелкая водяная взвесь" loading="lazy">
+          <figcaption>Мойка арок и днища</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="lounge" class="manifest">
+    <div class="wrap lounge-grid">
+      <div class="lounge-photo reveal">
+        <img src="img/gal3.jpg" width="1152" height="864" alt="Зал ожидания автомойки: кресла, столик, тёплый свет" loading="lazy">
+      </div>
+      <div class="lounge-txt reveal">
+        <p class="eyebrow">пока моют</p>
+        <h2>Ждать — в зале,<br>а не у борта</h2>
+        <ul class="lounge-list">
+          <li>Ожидание — в отдельном зале: кофе и чай с собой, кафе, Wi-Fi для клиентов.</li><li>Автоматическая дверь на входе — заезд и выход с коляской или сумками не превращаются в квест.</li><li>Оплата любая: картой, наличными, банковским переводом, по QR-коду и через приложение.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">422 отзывов в 2ГИС</p>
+        <h2>Что говорят гости</h2>
+      </div>
+      <div class="rev-grid">
+        <figure class="rev reveal">
+      <div class="rev-q">“</div>
+      <blockquote>Приехал вечером после трассы — машину в пыли и грязи. Сделали комплекс, кузов блестит, салон без разводов.</blockquote>
+      <p class="rev-src">гость мойки</p>
+    </figure><figure class="rev reveal">
+      <div class="rev-q">“</div>
+      <blockquote>Отдавал авто на химчистку с разбором: подошли к делу спокойно, объяснили, что и зачем снимают, сделали от потолка до пола.</blockquote>
+      <p class="rev-src">гость мойки</p>
+    </figure><figure class="rev reveal">
+      <div class="rev-q">“</div>
+      <blockquote>Жду в зале с кофе, пока моют — по времени всё предсказуемо. Записался на следующую мойку сразу.</blockquote>
+      <p class="rev-src">гость мойки</p>
+    </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <div class="wrap contacts-grid">
+      <div>
+        <div class="sec-head reveal">
+          <p class="eyebrow">контакты</p>
+          <h2>Кажымукана, 4</h2>
+        </div>
+        <div class="reveal">
+          <div class="c-row"><div class="c-lab">Адрес</div><div class="c-val">улица Кажымукана, 4<br>Медеуский район, Алматы 050051</div></div>
+          <div class="c-row"><div class="c-lab">Телефон</div><div class="c-val"><a href="tel:+77017066666">+7 701 706 66 66</a><br>+7 700 027 20 20 · +7 776 677 77 76</div></div>
+          <div class="c-row"><div class="c-lab">Часы</div><div class="c-val">Ежедневно, 08:00 — 23:00</div></div>
+          <div class="c-row"><div class="c-lab">2ГИС</div><div class="c-val"><a href="https://2gis.kz/almaty/firm/70000001086973403" target="_blank" rel="noopener">Карточка с отзывами и фото</a></div></div>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-gold" href="https://wa.me/77017066666" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-ghost" href="tel:+77017066666">Позвонить</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <div id="map"></div>
+        <p class="map-note">Ориентир — Медеуский район, улица Кажымукана. Заезд в боксы со стороны улицы.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="final-bg"><img src="img/texture.jpg" width="1024" height="1024" alt="Капли воды на чёрной краске кузова" loading="lazy"></div>
+    <div class="wrap final-in">
+      <p class="eyebrow">запись</p>
+      <h2>Приезжайте,<br>мы работаем до 23:00</h2>
+      <p>Напишите в WhatsApp класс машины и удобное время — ответим и забронируем бокс.</p>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="https://wa.me/77017066666" target="_blank" rel="noopener">Написать в WhatsApp</a>
+        <a class="btn btn-ghost" href="tel:+77017066666">Позвонить</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="fn">Lux Line</div>
+      <p style="margin-top:8px">Автомойка · улица Кажымукана, 4, Алматы</p>
+    </div>
+    <div>
+      <a href="tel:+77017066666">+7 701 706 66 66</a><br>
+      <a href="https://wa.me/77017066666" target="_blank" rel="noopener">WhatsApp</a><br>
+      <a href="https://2gis.kz/almaty/firm/70000001086973403" target="_blank" rel="noopener">Мы в 2ГИС</a>
+    </div>
+    <div class="made">Сайт сделан бесплатно · <a href="https://fntai.org" target="_blank" rel="noopener">FNT AI</a></div>
+  </div>
+</footer>
+
+<div class="sticky-bar" id="sbar">
+  <a class="btn btn-gold" href="https://wa.me/77017066666" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn btn-ghost" href="tel:+77017066666">Позвонить</a>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function(){
+  function init(){
+    if(typeof L==='undefined') return;
+    var m=L.map('map',{scrollWheelZoom:false}).setView([43.226198,76.960371],16);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+      attribution:'&copy; OpenStreetMap',maxZoom:19}).addTo(m);
+    L.circleMarker([43.226198,76.960371],{radius:9,color:'#C9A24A',weight:2,
+      fillColor:'#C9A24A',fillOpacity:.85}).addTo(m).bindPopup('Lux Line Luxury Auto Spa');
+    setTimeout(function(){m.invalidateSize();},400);
+  }
+  if(document.readyState==='complete'){init();}else{window.addEventListener('load',init);}
+})();
+</script>
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var bar=document.getElementById('sbar');
+  var onScroll=function(){
+    if(!bar) return;
+    if(window.scrollY>window.innerHeight*0.7){bar.classList.add('on');}else{bar.classList.remove('on');}
+  };
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(en){
+    en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -8% 0px',threshold:0.08});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1600);
+})();
+</script>
+</body>
+</html>
